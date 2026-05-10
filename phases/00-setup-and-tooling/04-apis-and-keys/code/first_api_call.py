@@ -12,11 +12,10 @@ def call_with_sdk():
 
     client = anthropic.Anthropic()
     response = client.messages.create(
-        model="claude-sonnet-4-20250514",
+        model="claude-sonnet-4-6",
         max_tokens=256,
         messages=[{"role": "user", "content": "What is a neural network in one sentence?"}]
     )
-    print(f"SDK response: {response.content[0].text}")
     print(f"Tokens used: {response.usage.input_tokens} in, {response.usage.output_tokens} out")
 
 
@@ -33,7 +32,7 @@ def call_raw_http():
         "anthropic-version": "2023-06-01",
     }
     body = json.dumps({
-        "model": "claude-sonnet-4-20250514",
+        "model": "claude-sonnet-4-6",
         "max_tokens": 256,
         "messages": [{"role": "user", "content": "What is a neural network in one sentence?"}],
     }).encode()
