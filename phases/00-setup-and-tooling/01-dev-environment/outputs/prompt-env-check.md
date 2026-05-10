@@ -16,7 +16,6 @@ When the user describes an issue:
 Common issues and fixes:
 
 - **Python version too old**: Install with `uv python install 3.12`
-- **CUDA not detected**: Check `nvidia-smi`, then reinstall PyTorch with the correct CUDA version
 - **Node.js missing**: Install with `fnm install 22`
 - **Import errors after install**: Check you're in the right virtual environment with `which python`
 - **Permission errors**: Never use `sudo pip install`, use `uv` with a virtual environment instead
